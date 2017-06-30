@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Artifika|Henny+Penny|Patrick+Hand+SC|Spectral:300|Josefin+Sans:300|Special+Elite');
+
+* {
+  box-sizing: border-box;
+   }
+html {
+  font-size: 16px;
+}
+ body {
+  font-size: 18px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  line-height: 150%; 
+  padding: 0;
+  margin: 0;
+  }
+ 
+/*  Navbar part */
+
+.page-scroll {
+  animation: bounceInDown 2s  linear;
+}
+
+.navbar .navbar-collapse {
+	text-align: center;
+	float: none;
+	border-color: transparent;
+  overflow: hidden;
+  margin-right: 15%;
+}
+
+.navbar-default {
+	background: transparent;
+	border-color: transparent;
+}
+.navbar-default .navbar-brand {
+	font-family: 'Henny Penny', cursive;
+	font-size: 2rem;
+	color: #fff !important;
+	font-weight: bold;
+	text-shadow: -2px -2px 0px #08f, -2px -4px 6px #000;
+	
+}
+
+.navbar-default .navbar-collapse {
+	border-color: transparent !important;
+}.navbar-default .navbar-collapse .navbar-nav {
+  text-align: center;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 19px 10px;
+    margin-top: 2px;
+    margin-right: 18px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar-nav li a {
+  color: #fff !important;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: 'Josefin Sans';
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.navbar-nav {
+  position: relative;
+  left: 12%;
+}
+.navbar-default .navbar-nav>.active>a {
+  background: none !important;
+  color: #f48 !important;
+}
+
+.navbar-nav li a:hover {
+  color: #f48 !important;
+}
+/* Navbar hamburger animation */
+
+/*.hamburger-icon{
+  display: block;
+  height: 45px;
+  margin: 100px auto;
+  position: relative;
+  width: 75px;
+}*/
+.icon-bar{
+  
+  border-radius: 4px;
+  display: block;
+  height: 8px;
+  left:0;
+  color: #fff;
+  -webkit-transition: all 320ms ease-in;
+  transition: all 320ms ease-in;
+  width: 100%;
+}
+.top-bar{
+  top:0;
+}
+.middle-bar{
+  top: 50%;
+}
+.bottom-bar{
+  top:100%;
+}
+
+.hamburger-icon:hover .top-bar,
+.hamburger-icon:focus .top-bar{
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.hamburger-icon:hover .bottom-bar,
+.hamburger-icon:focus .bottom-bar{
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+.hamburger-icon.active .top-bar{
+  -webkit-transform: translateY(6px) translateX(0) rotate(225deg);
+          transform: translateY(6px) translateX(0) rotate(225deg);
+}
+.hamburger-icon.active .middle-bar{
+  opacity: 0;
+}
+.hamburger-icon.active .bottom-bar{
+  -webkit-transform: translateY(-2px) translateX(0) rotate(-225deg);
+          transform: translateY(-2px) translateX(0) rotate(-225deg);
+}
+
+/*hamburger animation end*/
+
+
+/* Navbar part end */
+
+
+/*  Intro section name block  */
+
+
+.name-block {
+	padding: 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.name-block h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-shadow: -2px -2px 4px #08f, -2px -4px 6px #000;
+  animation: flash 3s linear;
+  position: absolute;
+  top: 47%;
+  left: 32%;
+  color: #f9f1e9;
+  text-align: center;
+}
+#names {
+  position: absolute;
+  left: 40%;
+  top: 60%;
+}
+
+i {
+  font-size: 5rem;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  color: #0f8;
+  animation: bounce 3s infinite linear, hue 10s infinite alternate;
+  transform-origin: center-bottom;
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+
+@keyframes hue {
+  20% {
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+
+#name-block {
+  position: relative;
+  background-size: contain;
+  background-position: center center;
+  z-index: 1;
+  background: url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+ 
+}
+@-webkit-keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+}
+ 
+@-moz-keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+}
+ 
+@-ms-keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+}
+ 
+@-o-keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+}
+ 
+@keyframes animate {
+  from {background-position:0 0;}
+  to {background-position: 500px 0;}
+}
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+#names {
+	font-size: 2.5rem;
+  color: #fff;
+  font-weight: 100;
+  font-family: 'Special Elite';
+}
+#name {
+  font-size: 2.5rem;
+  color: #000;
+  font-family: 'Special Elite', cursive;
+}
+
+/*  intro section end */
+
+
+
+/*  The content blocks */
+
+
+#about, #services, #contact {
+  height: 45rem;
+  position: relative;
+}
+#about h1, #services h1, #contact h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 200;
+  margin-top: 0px;
+  padding: 40px;
+}
+#about {
+  background: url("60.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+/* The content blocks end*/
+
+
+@media (max-width: 786px) {
+  .name-block h1 {
+    left: 11%;
+    font-size: 2.5rem;
+  }
+  #names {
+    font-size: 1.75rem;
+    left: 25%;
+  }
+  #name {
+    font-size: 1.75rem;
+    left: 29%;
+    top: 57%;
+  }
+  i {
+    left: 45%;
+  }
+}
